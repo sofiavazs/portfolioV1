@@ -8,6 +8,7 @@
   "plugins": ["prettier", "@typescript-eslint"],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "indent": "off",
     "prettier/prettier": [
       "error",
       {

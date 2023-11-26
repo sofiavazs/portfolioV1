@@ -1,8 +1,13 @@
-import styles from './page.module.css'
+
+import About from "./about/page";
+import Bio from "./components/Bio";
 
 export default function Home() {
   return (
-    <main>
-    </main>
+    <>
+      <main>
+        <Bio />
+      </main>
+    </>
   )
 }
