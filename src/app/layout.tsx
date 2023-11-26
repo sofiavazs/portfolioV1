@@ -19,10 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+
         <StyledComponentsRegistry>
           <NavigationBar />
-          {children}
+          <main>
+            {children}
+          </main>
         </StyledComponentsRegistry>
+
       </body>
     </html>
   )

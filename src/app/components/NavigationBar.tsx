@@ -1,16 +1,19 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
 
 const NavigationBar: React.FC = () => {
-  const path = usePathname();
-  console.log(path)
+  const hash = usePathname();
+  // const hash = window.location.hash;
+  console.log(hash)
+
+
   return (
     <NavBar>
-      <StyledLink href="/" className={path === "/" ? "active" : ""}>Home</StyledLink>
-      <StyledLink href="/about" className={path === "/about" ? "active" : ""}>About</StyledLink>
+      <StyledLink href="/" className={hash === "" ? "active" : ""}>Home</StyledLink>
+      <StyledLink href="/#about" className={hash === "#about" ? "active" : ""}>About</StyledLink>
       <StyledLink href="/experience">Experience</StyledLink>
       <StyledLink href="/projects">Projects</StyledLink>
     </NavBar>
@@ -18,12 +21,17 @@ const NavigationBar: React.FC = () => {
 };
 
 const NavBar = styled.nav`
+  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: flex-end;
   position: sticky;
   align-items:center;
   top:0;
+  background-color: rgba(255, 255, 255, 0);
+    -o-backdrop-filter: blur(4px);
+    -moz-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 `
 
 const StyledLink = styled(Link)`

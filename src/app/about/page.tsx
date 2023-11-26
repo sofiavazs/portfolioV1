@@ -9,7 +9,7 @@ const Page: React.FC = () => {
   return (
     <>
       <Container>
-        <h1>
+        <h1 id="about">
           About
         </h1>
         <Wrapper>
@@ -45,6 +45,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
+  scroll-margin-top: 50px;
 
   h1 {
     color: #191975c9;
@@ -64,7 +65,7 @@ const Wrapper = styled.div`
   flex-direction:row;
   justify-content: center;
   align-items: center;
-   padding-top: 2rem;
+  padding-top: 2rem;
   img {
     border-radius: 6px;
     margin-left: 2rem;

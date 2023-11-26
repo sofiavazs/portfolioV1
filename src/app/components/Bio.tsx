@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Bio: React.FC = () => {
   return (
     <>
-      <HeroContainer>
+      <StyledHeroContainer>
         <h1>
           hello, my name is
         </h1>
@@ -15,16 +15,16 @@ const Bio: React.FC = () => {
           Currently, I'm building human-centered products within e-health.
         </p>
         <Button>Check my resume!</Button>
-      </HeroContainer>
+      </StyledHeroContainer>
     </>
   );
 };
 export default Bio;
 
-const HeroContainer = styled.div`
+const StyledHeroContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 5rem;
+  padding: 7rem 5rem;
   margin-bottom: 3rem;
 
   h1,h2,h3 {
