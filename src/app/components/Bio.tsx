@@ -14,7 +14,7 @@ const Bio: React.FC = () => {
         <p>I’m software developer with a 12-year background in healthcare that transitioned into tech.
           Currently, I'm building human-centered products within e-health.
         </p>
-        <Button>Resume</Button>
+        <Button>Check my resume!</Button>
       </HeroContainer>
     </>
   );
@@ -32,7 +32,7 @@ const HeroContainer = styled.div`
   }
 
   h1 {
-    color: #3ef3bb;
+    color: #e90ec8;
     font-size: 1rem;
     font-family: menlo;
     font-weight: 200;
@@ -40,22 +40,36 @@ const HeroContainer = styled.div`
   }
 
   h2 {
-    color: #ccd6f6;
+    color: #191975c9;
     font-size: 4rem;
   }
 
   h3 {
-    color: #8892b0;
+    color:#15275c;
     font-size: 2rem;
   }
 
   p {
-    color: #8892b0;
+    color: #15275c;
     max-width: 550px;
     line-height: 1.5rem;
   }
 `;
 
 const Button = styled.button`
-width: 100px;
-`;
+  width: fit-content;
+  height: 50px;
+  border-radius: 4px;
+  background: transparent;
+  border: 2px solid #e90ec8;
+  cursor: pointer;
+  color: #e90ec8;
+  font-size: 1rem;
+  font-family: menlo;
+
+  &:hover {
+    outline: none;
+    box-shadow: 4px 4px 0 0 #e90ec8 ;
+    transform: translate(-5px, -5px);
+  }
+`

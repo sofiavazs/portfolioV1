@@ -47,13 +47,13 @@ const Container = styled.div`
   padding: 0 5rem;
 
   h1 {
-    color: #ccd6f6;
+    color: #191975c9;
     font-size: 4rem;
     margin: 0;
   }
 
   p {
-    color: #8892b0;
+    color: #15275c;
     max-width: 550px;
     line-height: 1.5rem;
   }
