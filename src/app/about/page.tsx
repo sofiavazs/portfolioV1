@@ -31,7 +31,7 @@ const Page: React.FC = () => {
               src={portrait}
               width={300}
               height={300}
-              alt="Picture of the author" />
+              alt="Sofia's picture" />
           </div>
         </Wrapper>
       </Container>

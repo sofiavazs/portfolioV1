@@ -1,0 +1,124 @@
+[
+  {
+    "id": "1",
+    "name": "Time Capsule",
+    "description": "Multi page fullstack application where parents can log in daily entries and track down a baby's progress 👶",
+    "imageUrl": "/assets/time-capsule.png",
+    "url": "https://time-capsule-final.netlify.app/",
+    "github": "https://github.com/sofiavazs/final-project-frontend",
+    "tags": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "REST API",
+        "Styled Components",
+        "Responsive",
+        "Node.js",
+        "Express.js",
+        "MongoDB"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Vapour",
+    "description": "Games library app built in React",
+    "imageUrl": "/assets/vapour.jpeg",
+    "url": "https://project-vapour.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-vapour",
+    "tags": [
+        "React",
+        "JavaScript",
+        "REST API",
+        "Styled Components",
+        "Responsive"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "To do app",
+    "description": "To do app built in React",
+    "imageUrl": "/assets/todoapp.png",
+    "url": "https://todo-app-sofia.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-todos",
+    "tags": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "Styled Components"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Nerd Quiz",
+    "description": "A nerd quizz built using React",
+    "imageUrl": "/assets/nerdquizz.png",
+    "url": "https://nerd-quizz.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-redux-quiz",
+    "tags": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "Styled Components",
+        "Mob-Programming"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Labyrinth",
+    "description": "A text based maze game",
+    "imageUrl": "/assets/labyrinth.png",
+    "url": "https://labyrinth-sj.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-labyrinth",
+    "tags": [
+        "React",
+        "Redux",
+        "JavaScript",
+        "Styled Components",
+        "Pair-programming"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Happy Thoughts",
+    "description": "Happy version of Twitter! Built with React",
+    "imageUrl": "/assets/happy-thoughts.png",
+    "url": "https://happythoughts-sofia.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-happy-thoughts",
+    "tags": [
+        "React",
+        "React Hooks",
+        "JavaScript",
+        "CSS",
+        "Pair-programming"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "VR Games Night",
+    "description": "Multi step form to plan games night!",
+    "imageUrl": "/assets/happy-thoughts.png",
+    "url": "https://vrgamesnight.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-survey",
+    "tags": [
+        "React",
+        "React Hooks",
+        "JavaScript",
+        "CSS"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Weather App",
+    "description": "Weather web application build with JavaScript using the Open Weather's API shows the current weather and a 5 day forecast",
+    "imageUrl": "/assets/weather.jpg",
+    "url": "https://minimalweatherapp.netlify.app/",
+    "github": "https://github.com/sofiavazs/project-weather-app",
+    "tags": [
+        "HTML",
+        "JavaScript",
+        "CSS",
+        "API",
+        "Responsive"
+    ]
+  }
+]

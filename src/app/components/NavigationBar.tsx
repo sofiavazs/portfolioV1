@@ -1,21 +1,21 @@
 "use client"
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import { usePathname, useParams } from "next/navigation";
 
 const NavigationBar: React.FC = () => {
-  const hash = usePathname();
-  // const hash = window.location.hash;
-  console.log(hash)
+  const [path, setPath] = useState<string>("/");
 
 
   return (
     <NavBar>
-      <StyledLink href="/" className={hash === "" ? "active" : ""}>Home</StyledLink>
-      <StyledLink href="/#about" className={hash === "#about" ? "active" : ""}>About</StyledLink>
-      <StyledLink href="/experience">Experience</StyledLink>
-      <StyledLink href="/projects">Projects</StyledLink>
+      <div>
+        <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Home</StyledLink>
+        <StyledLink href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
+        <StyledLink href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
+        <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink>
+        <StyledLink href="/#contact" onClick={() => setPath("#contact")} className={path === "#contact" ? "active" : ""}>Contact</StyledLink>
+      </div>
     </NavBar>
   );
 };
@@ -32,6 +32,10 @@ const NavBar = styled.nav`
     -o-backdrop-filter: blur(4px);
     -moz-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
+  div {
+    display:flex ;
+    padding-right: 1rem;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -43,9 +47,12 @@ const StyledLink = styled(Link)`
   border-bottom: 2px solid transparent;
   &.active {
     border-bottom: 2px solid #e90ec8;
+    color: #e90ec8;
+    transition:all .5s ease;
   }
   &:hover {
-    border-bottom: 2px solid #e90ec8;
+    color: #e90ec8;
+    transition:all .3s ease;
   }
 `
 
