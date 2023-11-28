@@ -93,5 +93,6 @@ const StyledSocialsWrapper = styled.div`
 
   a {
     padding: 8px;
+    cursor: pointer;
   }
 `;
