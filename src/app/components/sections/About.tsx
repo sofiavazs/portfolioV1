@@ -54,7 +54,7 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
   scroll-margin-top: 120px;
 
   h2 {

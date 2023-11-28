@@ -55,8 +55,10 @@ export default Bio;
 const StyledHeroContainer = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 9rem 5rem;
-  margin-bottom: 15rem;
+  justify-content: center;
+  padding: 0 5rem;
+  min-height: 100vh;
+  height: 100vh;
 
   h1,h2,h3 {
     margin:0;

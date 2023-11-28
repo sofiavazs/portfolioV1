@@ -6,11 +6,9 @@ import styled from "styled-components";
 const NavigationBar: React.FC = () => {
   const [path, setPath] = useState<string>("/");
 
-
   return (
     <NavBar>
-
-      <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Home</StyledLink>
+      <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Bio</StyledLink>
       <StyledLink href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
       <StyledLink href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
       {/* <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink> */}
@@ -66,7 +64,7 @@ const StyledLink = styled(Link)`
     cursor: pointer;
     color: #e90ec8;
     font-size: 1rem;
-    font-family: menlo;
+    font-family: monospace;
 
   &:hover {
     box-shadow: 3px 3px 0 0 #e90ec8;

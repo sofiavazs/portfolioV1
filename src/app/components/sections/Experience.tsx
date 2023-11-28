@@ -163,7 +163,7 @@ const Button = styled.button`
   border-radius: 4px;
   color: #e90ec8;
   font-size: 1rem;
-  font-family: menlo;
+  font-family: monospace;
   border: 1px solid transparent;
   text-align: center;
 
