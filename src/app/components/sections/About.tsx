@@ -26,13 +26,13 @@ const About: React.FC = () => {
             <p>This transition from healthcare allows me to seamlessly integrate skills honed from my previous career on my approach to software development and project leadership.</p>
             <p>On my free time, I'm also an avid VR games player. :)</p>
           </div>
-          <div>
+          <picture>
             <Image
               src={portrait}
               width={300}
               height={300}
-              alt="Sofia's picture" />
-          </div>
+              alt="headshot" />
+          </picture>
         </Wrapper>
       </Container>
     </>
@@ -41,10 +41,11 @@ const About: React.FC = () => {
 };
 export default About;
 
-const Container = styled.div`
+const Container = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
+  margin-bottom: 15rem;
   scroll-margin-top: 120px;
 
   h2 {
@@ -66,8 +67,11 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+
   img {
     border-radius: 6px;
     margin-left: 2rem;
+    padding: 5px;
+    border: 1px solid #e90ec8;
   }
 `;

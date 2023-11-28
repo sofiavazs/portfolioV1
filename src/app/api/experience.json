@@ -2,8 +2,8 @@
   {
     "id": "1",
     "company": "Chorus AB",
-    "title": "Frontend Developer / Project lead",
-    "description": "",
+    "title": "Software Developer",
+    "description": "Delivering high-quality, scalable production code for a diverse array of projects within e-health, providing valuable clinical insights from my clinical experience into system's architecture and user flows and responsible for project leadership within a team through close collaboration in an agile environment.",
     "date": "April 2021 - present",
     "projects": [
       {
@@ -29,8 +29,8 @@
   {
     "id": "2",
     "company": "Karolinska University Hospital",
-    "title": "Specialist Nurse",
-    "description": "",
+    "title": "Clinical Nurse Specialist / Pain management nurse  ",
+    "description": "Specialist pain management nurse within recovery room. Responsible from postoperative care/srecovery of patients undergoing major surgery and follow-up and support to nursing teams with patients requiring specialist pain management therapy (i.e. epidural analgesia) after major surgery. ",
     "date": "October 2016 - April 2021",
     "projects": []
   },
@@ -38,7 +38,7 @@
     "id": "3",
     "company": "Guy's and St.Thomas NHS Foundation Trust",
     "title": "Clinical Nurse Specialist in intravascular access",
-    "description": "",
+    "description": "Responsible for auditing and quality improvement on venous access across the Trust. Support and educate nursing teams across the Trust regarding the care and management of peripheral and central access devices.",
     "date": "October 2016 - April 2021",
     "projects": []
   }

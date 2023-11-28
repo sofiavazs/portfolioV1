@@ -9,13 +9,13 @@ const NavigationBar: React.FC = () => {
 
   return (
     <NavBar>
-      <div>
-        <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Home</StyledLink>
-        <StyledLink href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
-        <StyledLink href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
-        <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink>
-        <StyledLink href="/#contact" onClick={() => setPath("#contact")} className={path === "#contact" ? "active" : ""}>Contact</StyledLink>
-      </div>
+
+      <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Home</StyledLink>
+      <StyledLink href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
+      <StyledLink href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
+      <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink>
+      <StyledLink href="/#contact" onClick={() => setPath("#contact")} className={path === "#contact" ? "active" : ""}>Contact</StyledLink>
+      <StyledLink href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">Resume</StyledLink>
     </NavBar>
   );
 };
@@ -55,6 +55,24 @@ const StyledLink = styled(Link)`
     color: #e90ec8;
     transition:all .3s ease;
   }
-`
+
+  &.resume-link {
+    width: fit-content;
+    padding: 10px;
+    margin-right: 30px;
+    border: 1px solid #e90ec8;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    color: #e90ec8;
+    font-size: 1rem;
+    font-family: menlo;
+
+  &:hover {
+    box-shadow: 3px 3px 0 0 #e90ec8;
+    transform: translate(-4px, -4px);
+  }
+}
+`;
 
 export default NavigationBar;
