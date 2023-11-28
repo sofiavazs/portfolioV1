@@ -51,7 +51,7 @@ const StyledLink = styled(Link)`
   }
   &:hover {
     color: #e90ec8;
-    transition:all .3s ease;
+    transition: all .3s ease;
   }
 
   &.resume-link {
@@ -65,10 +65,11 @@ const StyledLink = styled(Link)`
     color: #e90ec8;
     font-size: 1rem;
     font-family: monospace;
-
-  &:hover {
     box-shadow: 3px 3px 0 0 #e90ec8;
-    transform: translate(-4px, -4px);
+
+  &:hover, :active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
   }
 }
 `;

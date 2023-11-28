@@ -159,16 +159,18 @@ const Button = styled.button`
   width: fit-content;
   padding: 10px;
   background: transparent;
+  border: 1px solid #e90ec8;
   cursor: pointer;
   border-radius: 4px;
   color: #e90ec8;
   font-size: 1rem;
   font-family: monospace;
-  border: 1px solid transparent;
   text-align: center;
+  box-shadow: 3px 3px 0 0 #e90ec8;
 
-  &:hover {
-    border: 1px solid #e90ec8;
-    transition: all .3s;
+  &:hover, :active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+    transition: all .3s ease;
   }
 `;
