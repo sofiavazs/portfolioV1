@@ -74,12 +74,11 @@ const Wrapper = styled.div`
   display:flex;
   flex-direction:row;
   justify-content: center;
-  align-items: center;
   padding-top: 2rem;
 
   img {
     border-radius: 6px;
-    margin-left: 2rem;
+    margin: 1.25rem 0 0 1.25rem;
     padding: 5px;
     border: 1px solid #e90ec8;
   }

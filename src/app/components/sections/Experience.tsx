@@ -84,7 +84,7 @@ const Wrapper = styled.div`
 
 const Card = styled.div`
   width: 65%;
-  padding: 1.5rem;
+  padding: 2rem;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -143,7 +143,7 @@ const CardBody = styled.div`
   p {
     color: #15275c;
     font-size: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.75rem;
   }
   .project-subheader {
     color: #15275c;
