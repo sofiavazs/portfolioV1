@@ -149,7 +149,7 @@ const CardBody = styled.div`
     color: #15275c;
     font-size: 0.75rem;
     text-transform: uppercase;
-    line-height: 1.25rem;
+    line-height: 1.75rem;
     letter-spacing: 1.5px;
     margin: 0;
   }
