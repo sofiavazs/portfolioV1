@@ -25,6 +25,15 @@ const About: React.FC = () => {
             </p>
             <p>This transition from healthcare allows me to seamlessly integrate skills honed from my previous career on my approach to software development and project leadership.</p>
             <p>On my free time, I'm also an avid VR games player. :)</p>
+            <p>Some of the technologies I've been working with lately:</p>
+            <ul>
+              <li>Typescript</li>
+              <li>Javascript (ES6+)</li>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Styled Components</li>
+              <li>Ruby on Rails (currently learning)</li>
+            </ul>
           </div>
           <picture>
             <Image
@@ -73,5 +82,26 @@ const Wrapper = styled.div`
     margin-left: 2rem;
     padding: 5px;
     border: 1px solid #e90ec8;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 250px));
+    gap: 0px 10px;
+    padding: 1.5rem;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: square;
+
+    li {
+      font-size: 1rem;
+      line-spacing: 1.25px;
+      color: #15275c;
+      line-height: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;

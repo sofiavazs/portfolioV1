@@ -56,7 +56,7 @@ export default Experience;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 5rem;
+  padding: 0rem 5rem 5rem 5rem;
   margin-top: 7rem;
   scroll-margin-top: 120px;
   h2 {
