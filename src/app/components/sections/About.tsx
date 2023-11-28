@@ -2,16 +2,16 @@
 import React from "react";
 import styled from "styled-components";
 import Image from 'next/image'
-import portrait from "../../../public/assets/portrait.jpg";
+import portrait from "./../../../../public/assets/portrait.jpg";
 
 
-const Page: React.FC = () => {
+const About: React.FC = () => {
   return (
     <>
-      <Container>
-        <h1 id="about">
-          About
-        </h1>
+      <Container id="about">
+        <h2>
+          About me
+        </h2>
         <Wrapper>
           <div>
             <p>
@@ -39,15 +39,15 @@ const Page: React.FC = () => {
 
   );
 };
-export default Page;
+export default About;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 5rem;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 120px;
 
-  h1 {
+  h2 {
     color: #191975c9;
     font-size: 4rem;
     margin: 0;
@@ -69,6 +69,5 @@ const Wrapper = styled.div`
   img {
     border-radius: 6px;
     margin-left: 2rem;
-
   }
 `;

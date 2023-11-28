@@ -1,0 +1,45 @@
+[
+  {
+    "id": "1",
+    "company": "Chorus AB",
+    "title": "Frontend Developer / Project lead",
+    "description": "",
+    "date": "April 2021 - present",
+    "projects": [
+      {
+        "name": "Zengio Care",
+        "dates": "May 2023 - present",
+        "title":"Frontend Developer / Project lead",
+        "description": "Zengio Care is a healthcare solution that streamlines patient flows and care delivery by allowing patients to perform pain and nausea assessments after surgery through their mobile device, this data is then available for the healthcare professionals on a web application. I was responsible for implementing internationalisation both on the web and mobile app, a user's reporting system and improve the application's scalability, as well as, lead the development process in an agile/iterative way."
+      },
+      {
+        "name": "Carasent / Medical records system",
+        "dates": "May 2021 - May 2023",
+        "title":"Frontend Developer / Scrum facilitator",
+        "description": "As the first front-end developer on the project, I actively contributed to the early-stage planning and my extensive clinical experience allowed me to offer valuable insights into the system's design and user flows. Additionally, I assumed the responsibility of Scrum Master within my team, further enhancing my leadership and organisational capabilities in an agile development environment."
+      },
+      {
+        "name": "Tobias tree",
+        "dates": "April 2021 - present",
+        "title":"Frontend Developer",
+        "description": "App for specialist doctors, managing difficult cases and providing instant emergency contact with medical colleagues worldwide. As front end developer I was responsible for re-structuring the user's list page and implement a new design using an external UI library."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "company": "Karolinska University Hospital",
+    "title": "Specialist Nurse",
+    "description": "",
+    "date": "October 2016 - April 2021",
+    "projects": []
+  },
+  {
+    "id": "3",
+    "company": "Guy's and St.Thomas NHS Foundation Trust",
+    "title": "Clinical Nurse Specialist in intravascular access",
+    "description": "",
+    "date": "October 2016 - April 2021",
+    "projects": []
+  }
+]

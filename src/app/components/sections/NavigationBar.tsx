@@ -36,6 +36,7 @@ const NavBar = styled.nav`
     display:flex ;
     padding-right: 1rem;
   }
+  z-index:1000;
 `
 
 const StyledLink = styled(Link)`
@@ -46,9 +47,9 @@ const StyledLink = styled(Link)`
   color: #191975c9;
   border-bottom: 2px solid transparent;
   &.active {
-    border-bottom: 2px solid #e90ec8;
+    border-bottom: 1px solid #e90ec8;
     color: #e90ec8;
-    transition:all .5s ease;
+    transition:all .3s ease;
   }
   &:hover {
     color: #e90ec8;
