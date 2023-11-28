@@ -122,7 +122,7 @@ const Header = styled.div`
   p {
     color: #15275c;
     font-size: 1rem;
-    line-height: 1.25rem;
+    line-height: 1.75rem;
   }
   .subheading {
     font-size: 0.75rem;
