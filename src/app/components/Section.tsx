@@ -31,7 +31,6 @@ const Container = styled.section`
   padding: 0 5rem;
   margin-bottom: 5rem;
   scroll-margin-top: 120px;
-  max-height: 100vh;
 
   h2 {
     color: #191975c9;
