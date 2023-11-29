@@ -6,7 +6,6 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 }
 
-
 html,
 body {
   width: 100vw;
@@ -28,6 +27,11 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+main {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 0px) and (max-width: 550px) {
