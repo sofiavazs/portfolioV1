@@ -93,13 +93,14 @@ const Wrapper = styled.div`
 
     li {
       font-size: 1rem;
-      line-spacing: 1.25px;
+      letter-spacing: 1.25px;
       color: #15275c;
-      line-height: 1.5rem;
+      line-height: 2rem;
     }
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 `;

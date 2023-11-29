@@ -8,11 +8,11 @@ const NavigationBar: React.FC = () => {
 
   return (
     <NavBar>
-      <StyledLink href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Bio</StyledLink>
-      <StyledLink href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
-      <StyledLink href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
+      <StyledLink id="link-bio" href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Bio</StyledLink>
+      <StyledLink id="link-about" href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
+      <StyledLink id="link-experience" href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
       {/* <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink> */}
-      <StyledLink href="mailto:sofiavazs@protonmail.com" target="_blank" rel="noopener noreferrer">Contact</StyledLink>
+      <StyledLink id="link-contact" href="mailto:sofiavazs@protonmail.com" target="_blank" rel="noopener noreferrer">Contact</StyledLink>
       <StyledLink href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">Resume</StyledLink>
     </NavBar>
   );
@@ -67,11 +67,11 @@ const StyledLink = styled(Link)`
     font-family: monospace;
     box-shadow: 3px 3px 0 0 #e90ec8;
 
-  &:hover, :active {
-    box-shadow: none;
-    transform: translate(4px, 4px);
+    &:hover, :active {
+      box-shadow: none;
+      transform: translate(4px, 4px);
+    }
   }
-}
 `;
 
 export default NavigationBar;
