@@ -2,16 +2,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import experience from "../../api/experience.json";
+import Section from "../Section";
 
 
 const Experience: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
-      <Container id="experience">
-        <h2>
-          Experience
-        </h2>
+      <Section sectionId="experience" header="Experience">
         <Wrapper>
           {experience.map((job, i) => {
             const hasProjects = job.projects.length > 0;
@@ -47,7 +45,7 @@ const Experience: React.FC = () => {
             )
           })}
         </Wrapper>
-      </Container>
+      </Section>
     </>
   );
 };
@@ -107,7 +105,7 @@ const Card = styled.div`
     border: 0;
     height: 1px;
     margin: 1rem;
-    background-image: linear-gradient( to right, rgba(249, 247, 247, 0), rgba(58, 10, 146, 0.402), rgba(237, 237, 237, 0) );
+    background-image: linear-gradient( to right, rgba(249, 247, 247, 0), rgba(58, 10, 146, 0.402), rgba(237, 237, 237, 0));
   }
 
   button {

@@ -1,17 +1,16 @@
 "use client"
 import React from "react";
 import styled from "styled-components";
-import Image from 'next/image'
+import Image from 'next/image';
+
 import portrait from "./../../../../public/assets/portrait.jpg";
+import Section from "../Section";
 
 
 const About: React.FC = () => {
   return (
     <>
-      <Container id="about">
-        <h2>
-          About me
-        </h2>
+      <Section sectionId="about" header="About">
         <Wrapper>
           <div>
             <p>
@@ -43,7 +42,7 @@ const About: React.FC = () => {
               alt="headshot" />
           </picture>
         </Wrapper>
-      </Container>
+      </Section>
     </>
 
   );

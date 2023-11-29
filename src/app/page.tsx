@@ -1,4 +1,4 @@
-import Bio from "./components/sections/Bio";
+import Bio from "./components/Bio";
 import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
 

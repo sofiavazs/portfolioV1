@@ -67,7 +67,7 @@ const StyledHeroContainer = styled.section`
   h1 {
     color: #e90ec8;
     font-size: 1rem;
-    font-family: menlo;
+    font-family: monospace;
     font-weight: 200;
     margin-bottom: 1rem;
   }
