@@ -40,8 +40,11 @@ const Container = styled.section`
 
   p {
     color: #15275c;
-    max-width: 550px;
     line-height: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
   }
 `;
 
