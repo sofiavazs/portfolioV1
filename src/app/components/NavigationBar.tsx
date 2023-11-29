@@ -27,7 +27,7 @@ const NavBar = styled.nav`
   align-items:center;
   top:0;
   background-color: rgba(255, 255, 255, 0);
-    -o-backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
     -moz-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
   div {
