@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import experience from "../../api/experience.json";
 import Section from "../Section";
+import Link from "next/link";
 
 
 const Experience: React.FC = () => {
@@ -15,12 +16,12 @@ const Experience: React.FC = () => {
             const hasProjects = job.projects.length > 0;
             return (
               <Card key={i}>
-                <Header>
+                <CardHeader>
                   <h3>{job.company}</h3>
                   <p className="subheading">{job.date}</p>
                   <p className="subheading">{job.title}</p>
                   <p>{job.description}</p>
-                </Header>
+                </CardHeader>
                 {hasProjects &&
                   <Button onClick={() => setIsOpen(!isOpen)}>
                     {!isOpen ? "View Projects" : "Close"}
@@ -44,6 +45,13 @@ const Experience: React.FC = () => {
               </Card>
             )
           })}
+          <Link
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="resume-link">
+            View full resume
+          </Link>
         </Wrapper>
       </Section>
     </>
@@ -51,33 +59,33 @@ const Experience: React.FC = () => {
 };
 export default Experience;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0rem 5rem 5rem 5rem;
-  margin-top: 7rem;
-  scroll-margin-top: 120px;
-  h2 {
-    color: #191975c9;
-    font-size: 4rem;
-    margin: 0;
-  }
-  button {
-    display: flex;
-    align-self: flex-end;
-  }
-`;
-
 const Wrapper = styled.div`
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
-  img {
-    border-radius: 6px;
-    margin-left: 2rem;
+  padding: 2rem 0;
+
+  .resume-link{
+    width: fit-content;
+    padding: 10px;
+    margin-right: 30px;
+    border: 1px solid #e90ec8;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    color: #e90ec8;
+    font-size: 1rem;
+    font-family: monospace;
+    box-shadow: 3px 3px 0 0 #e90ec8;
+    text-decoration: none;
+
+    &:hover, :active {
+      box-shadow: none;
+      transform: translate(4px, 4px);
+    }
   }
+
 `;
 
 const Card = styled.div`
@@ -113,7 +121,7 @@ const Card = styled.div`
   }
 `;
 
-const Header = styled.div`
+const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   word-wrap: break-word;

@@ -26,7 +26,8 @@ const NavBar = styled.nav`
   position: sticky;
   align-items:center;
   top:0;
-  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0px 1px 5px rgba(190, 190, 190, 0.46);
+  background-color: rgba(255, 255, 255, 0.3);
   -webkit-backdrop-filter: blur(4px);
     -moz-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
