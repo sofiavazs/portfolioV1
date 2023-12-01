@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
   return (
     <>
       <Section sectionId="projects" header="Projects">
-        <p>Most of these projects are from the Technigo Web development bootcamp, profissional projects are not included.</p>
+        <p>Most of these projects are from the Technigo Web development bootcamp, professional projects are not included.</p>
         <Wrapper>
           {projectsForDisplay.map((project, i) => {
             return (
