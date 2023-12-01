@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Bio from "./components/Bio";
 import About from "./components/sections/About";
 import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SectionWrapper>
         <About />
         <Experience />
+        <Projects />
       </SectionWrapper>
     </>
   );
