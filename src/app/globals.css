@@ -15,7 +15,7 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 15s ease-in-out infinite;
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* @keyframes gradient {

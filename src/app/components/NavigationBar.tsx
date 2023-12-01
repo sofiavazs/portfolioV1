@@ -11,7 +11,7 @@ const NavigationBar: React.FC = () => {
       <StyledLink id="link-bio" href="/" onClick={() => setPath("/")} className={path === "/" ? "active" : ""}>Bio</StyledLink>
       <StyledLink id="link-about" href="/#about" onClick={() => setPath("#about")} className={path === "#about" ? "active" : ""}>About</StyledLink>
       <StyledLink id="link-experience" href="/#experience" onClick={() => setPath("#experience")} className={path === "#experience" ? "active" : ""}>Experience</StyledLink>
-      {/* <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink> */}
+      <StyledLink href="/#projects" onClick={() => setPath("#projects")} className={path === "#projects" ? "active" : ""}>Projects</StyledLink>
       <StyledLink id="link-contact" href="mailto:sofiavazs@protonmail.com" target="_blank" rel="noopener noreferrer">Contact</StyledLink>
       <StyledLink href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link">Resume</StyledLink>
     </NavBar>
