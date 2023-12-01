@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
               <Card key={i}>
                 <CardHeader>
                   <h1>{project.name}</h1>
-                  <div>
+                  <span>
                     <Link href={project.github} target="_blank" rel="noopener noreferrer">
                       <Image
                         src={IconGithub}
@@ -42,11 +42,12 @@ const Projects: React.FC = () => {
                         />
                       </Link>
                     }
-                  </div>
+                  </span>
                 </CardHeader>
                 <CardBody>
-                  <p>{project.description}</p>
-                  <Link href={project.url} target="_blank" rel="noopener noreferrer" />
+                  <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                    <p>{project.description}</p>
+                  </Link>
                 </CardBody>
                 <CardFooter>
                   <ul>
@@ -89,7 +90,6 @@ const Card = styled.div`
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
   border: 1px solid rgba(255, 255, 255, 0.51);
-  cursor: pointer;
 
   &:hover {
     transform: translateY(-10px);
@@ -117,18 +117,16 @@ const CardBody = styled.div`
     font-size: 1.5rem;
     margin-bottom: 0;
   }
+
   p {
     color: #15275c;
     font-size: 1rem;
     line-height: 1.75rem;
+    cursor: pointer;
   }
-  .project-subheader {
-    color: #15275c;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    line-height: 1.75rem;
-    letter-spacing: 1.5px;
-    margin: 0;
+
+  a {
+    text-decoration: none;
   }
 `;
 

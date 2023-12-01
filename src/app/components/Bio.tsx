@@ -96,5 +96,10 @@ const StyledSocialsWrapper = styled.div`
   a {
     padding: 8px;
     cursor: pointer;
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: all 0.3s ease-in-out;
+    }
   }
 `;
