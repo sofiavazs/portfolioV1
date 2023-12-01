@@ -110,12 +110,18 @@ const CardHeader = styled.div`
   width: 100%;
   justify-content: space-between;
   word-wrap: break-word;
+
   h1 {
     color: #15275c;
-    margin: 0;
+    margin: 0 1rem 0 0;
   }
-  a:first-child {
-    margin-right: 1rem;
+
+  span {
+    display: flex;
+
+    a:first-child {
+      margin-right: 1rem;
+    }
   }
 `;
 
