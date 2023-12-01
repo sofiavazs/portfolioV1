@@ -75,6 +75,14 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(30%, 1fr));
   padding-top: 2rem;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill,minmax(100%, 1fr));
+  }
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: repeat(auto-fill,minmax(50%, 1fr));
+  }
 `;
 
 const Card = styled.div`
