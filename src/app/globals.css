@@ -34,9 +34,3 @@ main {
   flex-direction: column;
 }
 
-@media screen and (min-width: 0px) and (max-width: 550px) {
-  #experience, #link-bio, #link-about, #link-experience, #link-contact, #link-projects {
-    display:none;
-  }
-}
-

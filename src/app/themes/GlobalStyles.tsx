@@ -2,10 +2,16 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    padding:0;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
+
+    @media screen and (min-width: 0px) and (max-width: 550px) {
+      #experience, #link-bio, #link-about, #link-experience, #link-contact, #link-projects {
+        display:none;
+      }
+    }
+  };
 
   body {
     background: ${props => props.theme.background};
