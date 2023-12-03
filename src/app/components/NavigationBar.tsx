@@ -63,7 +63,7 @@ const StyledLink = styled(Link)`
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
-    color:${props => props.theme.tertiary};
+    color:${props => props.theme.tertiaryColor};
     font-size: 1rem;
     font-family: monospace;
     box-shadow: 3px 3px 0 0 ${props => props.theme.tertiaryColor};
