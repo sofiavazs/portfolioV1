@@ -33,13 +33,13 @@ const Container = styled.section`
   scroll-margin-top: 120px;
 
   h2 {
-    color: #191975c9;
+    color: ${props => props.theme.secondaryColor};
     font-size: 4rem;
     margin: 0;
   }
 
   p {
-    color: #15275c;
+    color: ${props => props.theme.primaryColor};
     line-height: 1.5rem;
   }
 

@@ -61,7 +61,7 @@ const StyledHeroContainer = styled.section`
   height: 100vh;
 
   h1,h2,h3 {
-    margin:0;
+    margin: 0;
   }
 
   h1 {

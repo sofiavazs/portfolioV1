@@ -49,25 +49,25 @@ const About: React.FC = () => {
 };
 export default About;
 
-const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-  padding: 0 5rem;
-  margin-bottom: 5rem;
-  scroll-margin-top: 120px;
+// const Container = styled.section`
+//   display: flex;
+//   flex-direction: column;
+//   padding: 0 5rem;
+//   margin-bottom: 5rem;
+//   scroll-margin-top: 120px;
 
-  h2 {
-    color: #191975c9;
-    font-size: 4rem;
-    margin: 0;
-  }
+//   h2 {
+//     color: #191975c9;
+//     font-size: 4rem;
+//     margin: 0;
+//   }
 
-  p {
-    color: #15275c;
-    max-width: 550px;
-    line-height: 1.5rem;
-  }
-`;
+//   p {
+//     color: #15275c;
+//     max-width: 550px;
+//     line-height: 1.5rem;
+//   }
+// `;
 
 const Wrapper = styled.div`
   display:flex;
@@ -79,7 +79,7 @@ const Wrapper = styled.div`
     border-radius: 6px;
     margin: 1.25rem 0 0 1.25rem;
     padding: 5px;
-    border: 1px solid #e90ec8;
+    border: 1px solid ${props => props.theme.tertiaryColor};
   }
 
   ul {
@@ -94,7 +94,7 @@ const Wrapper = styled.div`
     li {
       font-size: 1rem;
       letter-spacing: 1.25px;
-      color: #15275c;
+      color: ${props => props.theme.primaryColor};
       line-height: 2rem;
     }
   }

@@ -43,15 +43,15 @@ const StyledLink = styled(Link)`
   margin: 20px;
   flex: 0 1 calc(2% - 40px);
   text-decoration: none;
-  color: #191975c9;
+  color: ${props => props.theme.secondaryColor};
   border-bottom: 2px solid transparent;
   &.active {
-    border-bottom: 1px solid #e90ec8;
-    color: #e90ec8;
+    border-bottom: 1px solid ${props => props.theme.tertiaryColor};
+    color: ${props => props.theme.tertiary};
     transition:all .3s ease;
   }
   &:hover {
-    color: #e90ec8;
+    color: ${props => props.theme.tertiaryColor};
     transition: all .3s ease;
   }
 
@@ -59,14 +59,14 @@ const StyledLink = styled(Link)`
     width: fit-content;
     padding: 10px;
     margin-right: 30px;
-    border: 1px solid #e90ec8;
+    border: 1px solid ${props => props.theme.tertiaryColor};
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
-    color: #e90ec8;
+    color:${props => props.theme.tertiary};
     font-size: 1rem;
     font-family: monospace;
-    box-shadow: 3px 3px 0 0 #e90ec8;
+    box-shadow: 3px 3px 0 0 ${props => props.theme.tertiaryColor};
 
     &:hover, :active {
       box-shadow: none;

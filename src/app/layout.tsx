@@ -1,16 +1,16 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 
 import StyledComponentsRegistry from './lib/registry';
 import NavigationBar from './components/NavigationBar';
-import './globals.css';
+// import './globals.css';
+import GlobalThemeWrapper from './lib/GlobalThemeWrapper';
+import { useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Sofia Vaz Sousa Portfolio - Software Developer",
   description: "I’m software developer with a 12-year background in healthcare that transitioned into tech. Currently, I'm building human-centered products within e-health.",
-  icons :{
+  icons: {
     icon: "/assets/favicon.ico"
   }
 }
@@ -20,16 +20,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <StyledComponentsRegistry>
-          <main>
-            <NavigationBar />
-            {children}
-          </main>
+          <GlobalThemeWrapper>
+            <main>
+              <NavigationBar />
+              {children}
+            </main>
+          </GlobalThemeWrapper>
         </StyledComponentsRegistry>
       </body>
     </html>
   )
-}
+};

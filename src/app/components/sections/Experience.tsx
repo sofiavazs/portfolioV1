@@ -66,18 +66,18 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 2rem 0;
 
-  .resume-link{
+  .resume-link {
     width: fit-content;
     padding: 10px;
     margin-right: 30px;
-    border: 1px solid #e90ec8;
+    border: 1px solid ${props => props.theme.tertiaryColor};
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
-    color: #e90ec8;
+    color:${props => props.theme.tertiaryColor};
     font-size: 1rem;
     font-family: monospace;
-    box-shadow: 3px 3px 0 0 #e90ec8;
+    box-shadow: 3px 3px 0 0 ${props => props.theme.tertiaryColor};
     text-decoration: none;
 
     &:hover, :active {
@@ -85,7 +85,6 @@ const Wrapper = styled.div`
       transform: translate(4px, 4px);
     }
   }
-
 `;
 
 const Card = styled.div`
@@ -95,15 +94,15 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.175);
+  background: ${props => props.theme.card.background};
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: ${props => props.theme.card.boxShadow};
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border: 1px solid rgba(255, 255, 255, 0.51);
+  border: ${props => props.theme.card.border};
 
   h3 {
-    color: #15275c;
+    color: ${props => props.theme.primaryColor};
     font-size: 2rem;
     margin: 0;
   }
@@ -126,7 +125,7 @@ const CardHeader = styled.div`
   flex-direction: column;
   word-wrap: break-word;
   p {
-    color: #15275c;
+    color:  ${props => props.theme.primaryColor};
     font-size: 1rem;
     line-height: 1.75rem;
   }
@@ -142,12 +141,12 @@ const CardHeader = styled.div`
 
 const CardBody = styled.div`
   h4 {
-    color: #15275c;
+    color:  ${props => props.theme.primaryColor};
     font-size: 1.5rem;
     margin-bottom: 0;
   }
   p {
-    color: #15275c;
+    color:  ${props => props.theme.primaryColor};
     font-size: 1rem;
     line-height: 1.75rem;
   }
@@ -165,14 +164,14 @@ const Button = styled.button`
   width: fit-content;
   padding: 10px;
   background: transparent;
-  border: 1px solid #e90ec8;
+  border: 1px solid  ${props => props.theme.tertiaryColor};
   cursor: pointer;
   border-radius: 4px;
-  color: #e90ec8;
+  color: ${props => props.theme.tertiaryColor};
   font-size: 1rem;
   font-family: monospace;
   text-align: center;
-  box-shadow: 3px 3px 0 0 #e90ec8;
+  box-shadow: 3px 3px 0 0 ${props => props.theme.tertiaryColor};
 
   &:hover, :active {
     box-shadow: none;
