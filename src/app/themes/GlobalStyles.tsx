@@ -20,4 +20,9 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.primary};
     font-family: 'Roboto';
   }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
 `;
