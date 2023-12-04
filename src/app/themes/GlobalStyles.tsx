@@ -2,12 +2,12 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
 
     @media screen and (min-width: 0px) and (max-width: 550px) {
-      #experience, #link-bio, #link-about, #link-experience, #link-contact, #link-projects {
+      #link-experience, #link-bio, #link-about, #link-experience, #link-contact, #link-projects {
         display:none;
       }
     }
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
 	  background-size: 400% 400%;
     color: ${props => props.theme.primary};
-    font-family: 'Roboto';
+    margin: 0;
   }
 
   main {

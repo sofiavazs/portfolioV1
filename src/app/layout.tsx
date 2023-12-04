@@ -4,7 +4,6 @@ import StyledComponentsRegistry from './lib/registry';
 import NavigationBar from './components/NavigationBar';
 // import './globals.css';
 import GlobalThemeWrapper from './lib/GlobalThemeWrapper';
-import { useState } from 'react';
 
 
 export const metadata: Metadata = {
