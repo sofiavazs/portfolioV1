@@ -24,8 +24,8 @@ const Projects: React.FC = () => {
     <>
       <Section sectionId="projects" header="Projects">
         <p>
-          Most of these projects are from the Technigo Web development bootcamp,
-          professional projects are not included.
+          Most of these projects are hobby projects or from the Technigo Web
+          development bootcamp, professional projects are not included.
         </p>
         <Wrapper>
           {projectsForDisplay.map((project, i) => {
