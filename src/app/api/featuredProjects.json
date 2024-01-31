@@ -1,22 +1,38 @@
 [
   {
     "id": "1",
+    "name": "Pokémon Explorer",
+    "description": "A pokédex application using the PokéAPI built in Next.js and Typescript",
+    "url": "https://pokemonexplorer.vercel.app/",
+    "github": "https://github.com/sofiavazs/pokedex-nextjs",
+    "tags": ["Frontend", "Next.js", "React", "Typescript", "CSS-in-JS"]
+  },
+  {
+    "id": "2",
+    "name": "Heartburn checker",
+    "description": "Multi step questionnaire to assess heartburn and provide an outcome, using a .json from Kry",
+    "url": "",
+    "github": "https://github.com/sofiavazs/heartburn-checker",
+    "tags": ["Frontend", "React", "Typescript", "CSS-in-JS"]
+  },
+  {
+    "id": "3",
     "name": "Time Capsule",
     "description": "Fullstack application, multi-page built in React.",
     "url": "https://time-capsule-final.netlify.app/",
     "github": "https://github.com/sofiavazs/final-project-frontend",
     "tags": [
+      "Fullstack",
       "React",
       "Redux",
       "JavaScript",
       "REST API",
       "CSS-in-JS",
-      "Node.js",
-      "Fullstack"
+      "Node.js"
     ]
   },
   {
-    "id": "2",
+    "id": "4",
     "name": "Vapour",
     "description": "Games library app using my own API, built in React.",
     "url": "https://project-vapour.netlify.app/",
@@ -29,25 +45,18 @@
       "CSS-in-JS",
       "Node.js",
       "Express"
-
     ]
   },
   {
-    "id": "3",
+    "id": "5",
     "name": "To do app",
     "description": "Simple To do app built in React.",
     "url": "https://todo-app-sofia.netlify.app/",
     "github": "https://github.com/sofiavazs/project-todos",
-    "tags": [
-      "Frontend",
-      "React",
-      "Redux",
-      "JavaScript",
-      "CSS-in-JS"
-    ]
+    "tags": ["Frontend", "React", "Redux", "JavaScript", "CSS-in-JS"]
   },
   {
-    "id": "4",
+    "id": "6",
     "name": "Nerd Quiz",
     "description": "A nerd quizz built using React",
     "url": "https://nerd-quizz.netlify.app/",
@@ -62,7 +71,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "7",
     "name": "Happy Thoughts",
     "description": "Happy version of Twitter! Built with React",
     "url": "https://happythoughts-sofia.netlify.app/",
@@ -77,34 +86,23 @@
     ]
   },
   {
-    "id": "6",
+    "id": "8",
     "name": "Weather App",
     "description": "Weather web application build with JavaScript using the Open Weather's API.",
     "url": "https://minimalweatherapp.netlify.app/",
     "github": "https://github.com/sofiavazs/project-weather-app",
-    "tags": [
-      "Frontend",
-      "HTML",
-      "JavaScript",
-      "CSS"
-    ]
+    "tags": ["Frontend", "HTML", "JavaScript", "CSS"]
   },
   {
-    "id": "7",
+    "id": "9",
     "name": "VR Games Night",
     "description": "Multi step form to plan games night!",
     "url": "https://vrgamesnight.netlify.app/",
     "github": "https://github.com/sofiavazs/project-survey",
-    "tags": [
-      "Frontend",
-      "React",
-      "React Hooks",
-      "JavaScript",
-      "CSS"
-    ]
+    "tags": ["Frontend", "React", "React Hooks", "JavaScript", "CSS"]
   },
   {
-    "id": "8",
+    "id": "10",
     "name": "Labyrinth",
     "description": "A text based maze game",
     "url": "https://labyrinth-sj.netlify.app/",
@@ -119,16 +117,11 @@
     ]
   },
   {
-    "id": "9",
+    "id": "11",
     "name": "Magic Oracle App",
     "description": "Mobile app that gives a message upon shaking the phone 🔮.",
     "url": "",
     "github": "https://github.com/sofiavazs/project-react-native-app",
-    "tags": [
-      "Frontend",
-      "React Native",
-      "JavaScript",
-      "CSS-in-JS"
-    ]
+    "tags": ["Frontend", "React Native", "JavaScript", "CSS-in-JS"]
   }
 ]
