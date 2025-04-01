@@ -1,33 +1,41 @@
 [
   {
     "id": "1",
+    "company": "Sword Health",
+    "title": "Frontend Engineer",
+    "description": "As a frontend Engineer on the Growth Team, I focus on building and improving user-facing features to drive growth. I mainly work with Next.js, CSS Modules, Styled Components and a Node.js based headless CMS to bring things to life.Being part of the team means consistently releasing new features and conducting A/B tests every week to continuously optimize our work. We work closely with the Marketing Operations team, driving several initiatives that help streamline their processes. It's all about quick iterations and fast learning. My contributions to various initiatives have played a key role in boosting enrollments, and it's really rewarding to see the direct impact of what we're building! :)",
+    "date": "April 2024 - present",
+    "projects": []
+  },
+  {
+    "id": "2",
     "company": "Chorus AB",
     "title": "Software Developer",
     "description": "Delivering high-quality, scalable production code for a diverse array of projects within e-health, providing valuable clinical insights from my clinical experience into system's architecture and user flows and responsible for project leadership within a team through close collaboration in an agile environment.",
-    "date": "April 2021 - present",
+    "date": "April 2021 - December 2023",
     "projects": [
       {
         "name": "Zengio Care",
         "dates": "May 2023 - present",
-        "title":"Frontend Developer / Project lead",
+        "title": "Frontend Developer / Project lead",
         "description": "Zengio Care is a healthcare solution that streamlines patient flows and care delivery by allowing patients to perform pain and nausea assessments after surgery through their mobile device, this data is then available for the healthcare professionals on a web application. I was responsible for implementing internationalisation both on the web and mobile app, a user's reporting system and improve the application's scalability, as well as, lead the development process in an agile/iterative way."
       },
       {
         "name": "Carasent / Medical records system",
         "dates": "May 2021 - May 2023",
-        "title":"Frontend Developer / Scrum facilitator",
+        "title": "Frontend Developer / Scrum facilitator",
         "description": "As the first front-end developer on the project, I actively contributed to the early-stage planning and my extensive clinical experience allowed me to offer valuable insights into the system's design and user flows. Additionally, I assumed the responsibility of Scrum Master within my team, further enhancing my leadership and organisational capabilities in an agile development environment."
       },
       {
         "name": "Tobias tree",
-        "dates": "April 2021 - present",
-        "title":"Frontend Developer",
+        "dates": "April 2021 - December 2023",
+        "title": "Frontend Developer",
         "description": "App for specialist doctors, managing difficult cases and providing instant emergency contact with medical colleagues worldwide. As front end developer I was responsible for re-structuring the user's list page and implement a new design using an external UI library."
       }
     ]
   },
   {
-    "id": "2",
+    "id": "3",
     "company": "Karolinska University Hospital",
     "title": "Clinical Nurse Specialist / Pain management nurse  ",
     "description": "Specialist pain management nurse within recovery room. Responsible from postoperative care/srecovery of patients undergoing major surgery and follow-up and support to nursing teams with patients requiring specialist pain management therapy (i.e. epidural analgesia) after major surgery. ",
@@ -35,7 +43,7 @@
     "projects": []
   },
   {
-    "id": "3",
+    "id": "4",
     "company": "Guy's and St.Thomas NHS Foundation Trust",
     "title": "Clinical Nurse Specialist in intravascular access",
     "description": "Responsible for auditing and quality improvement on venous access across the Trust. Support and educate nursing teams across the Trust regarding the care and management of peripheral and central access devices.",
@@ -43,7 +51,7 @@
     "projects": []
   },
   {
-    "id": "4",
+    "id": "5",
     "company": "St.George's Healthcare NHS Trust",
     "title": "Specialist Neonatal Nurse",
     "description": "Responsible for providing care to neonatal patients across intensive care, high dependency care and special care.",
