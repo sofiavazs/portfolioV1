@@ -1,4 +1,3 @@
-
 export const defaultTheme = {
   name: "default",
   background: "radial-gradient(at right center, #96bae0, #fde4fdb4)",
@@ -17,5 +16,5 @@ export const defaultTheme = {
     background: "rgba(255, 255, 255, 0.175)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     border: "1px solid rgba(255, 255, 255, 0.51)",
-  }
+  },
 };
