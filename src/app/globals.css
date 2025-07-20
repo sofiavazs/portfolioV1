@@ -11,18 +11,6 @@ html,
 body {
   width: 100vw;
   margin: 0;
-  background:
-    radial-gradient(80.99% 100% at 50% 0%, #00ff0a 0%, #36008e 100%),
-    radial-gradient(50% 123.47% at 50% 50%, #efe7c8 0%, #36008e 100%),
-    linear-gradient(301.28deg, #ff006b 0%, #48dd9e 100%),
-    linear-gradient(294.84deg, #5a60e4 0%, #d30000 100%),
-    linear-gradient(52.29deg, #000000 0%, #00ff85 100%),
-    radial-gradient(100% 138.69% at 100% 0%, #0007a5 0%, #ff7a00 100%),
-    radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%);
-  background-blend-mode:
-    screen, screen, lighten, overlay, lighten, difference, normal;
-  background-size: 400% 400%;
-  animation: gradient 15s ease-in-out infinite;
   scroll-behavior: smooth;
 }
 

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
 import NavigationBar from "./components/NavigationBar";
 import GlobalThemeWrapper from "./lib/GlobalThemeWrapper";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Sofia Vaz Sousa Portfolio - Software Developer",
@@ -26,6 +27,7 @@ export default function RootLayout({
             <main>
               <NavigationBar />
               {children}
+              <Footer />
             </main>
           </GlobalThemeWrapper>
         </StyledComponentsRegistry>

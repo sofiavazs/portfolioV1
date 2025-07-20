@@ -10,6 +10,19 @@ const NavigationBar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsBlurred(window.scrollY > 50);
+      // Highlight the active link based on scroll position
+      const sections = document.querySelectorAll("section");
+      let currentPath = "/";
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 200 && rect.bottom >= 200) {
+          const id = section.getAttribute("id");
+          if (id) {
+            currentPath = `#${id}`;
+          }
+        }
+      });
+      setPath(currentPath);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -119,6 +132,7 @@ const StyledLink = styled(Link)`
     color: ${(props) => props.theme.tertiaryColor};
     transition: all 0.3s ease;
   }
+
   &:hover {
     color: ${(props) => props.theme.tertiaryColor};
     transition: all 0.3s ease;
