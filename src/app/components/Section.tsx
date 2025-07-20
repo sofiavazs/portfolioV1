@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import styled from "styled-components";
 
@@ -7,7 +7,6 @@ interface SectionProps {
   header?: string;
   children?: React.ReactNode;
 }
-
 
 const Section: React.FC<SectionProps> = ({ sectionId, header, children }) => {
   return (
@@ -20,7 +19,6 @@ const Section: React.FC<SectionProps> = ({ sectionId, header, children }) => {
         {children}
       </Container>
     </>
-
   );
 };
 export default Section;
@@ -33,13 +31,13 @@ const Container = styled.section`
   scroll-margin-top: 120px;
 
   h2 {
-    color: ${props => props.theme.secondaryColor};
+    color: ${(props) => props.theme.secondaryColor};
     font-size: 4rem;
     margin: 0;
   }
 
   p {
-    color: ${props => props.theme.primaryColor};
+    color: ${(props) => props.theme.primaryColor};
     line-height: 1.5rem;
   }
 
@@ -51,5 +49,9 @@ const Container = styled.section`
 const Divider = styled.span`
   display: block;
   height: 1px;
-  background-image: linear-gradient( to right, rgba(58, 10, 146, 0.502), rgba(237, 237, 237, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(58, 10, 146, 0.502),
+    rgba(237, 237, 237, 0)
+  );
 `;

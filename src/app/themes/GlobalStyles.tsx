@@ -14,10 +14,10 @@ export const GlobalStyle = createGlobalStyle`
   };
 
   body {
-    background: ${props => props.theme.background};
+    background: ${(props) => props.theme.background};
     background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
 	  background-size: 400% 400%;
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primaryColor};
     margin: 0;
   }
 

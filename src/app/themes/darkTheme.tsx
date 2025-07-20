@@ -1,4 +1,3 @@
-
 export const darkTheme = {
   name: "dark",
   // borderRadius: "4px",
@@ -18,5 +17,5 @@ export const darkTheme = {
     background: "rgba(255, 255, 255, 0.175)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     border: "1px solid rgba(255, 255, 255, 0.51)",
-  }
+  },
 };

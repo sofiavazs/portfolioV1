@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import React from "react";
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import styled from "styled-components";
 
 import IconGithub from "public/assets/icon-github.svg";
@@ -12,24 +12,27 @@ const Bio: React.FC = () => {
   return (
     <>
       <StyledHeroContainer>
-        <h1>
-          hello, my name is
-        </h1>
+        <h1>hello, my name is</h1>
         <h2>Sofia Vaz Sousa.</h2>
         <h3>I build things with code.</h3>
-        <p>I’m software developer with a 12-year background in healthcare that transitioned into tech.
-          Currently, I'm building human-centered products within e-health.
+        <p>
+          I&apos;m software developer with a 12-year background in healthcare
+          that transitioned into tech. Currently, I&apos;m building
+          human-centered products within e-health.
         </p>
         <StyledSocialsWrapper>
-          <Link href="https://github.com/sofiavazs" target="_blank" rel="noopener noreferrer">
-            <Image
-              src={IconGithub}
-              alt="Github logo"
-              width={50}
-              height={50}
-            />
+          <Link
+            href="https://github.com/sofiavazs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={IconGithub} alt="Github logo" width={50} height={50} />
           </Link>
-          <Link href="https://www.linkedin.com/in/sofiavazsousa/" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://www.linkedin.com/in/sofiavazsousa/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={IconLinkedin}
               alt="Linkedin logo"
@@ -37,13 +40,12 @@ const Bio: React.FC = () => {
               height={50}
             />
           </Link>
-          <Link href="mailto:sofiavazs@protonmail.com" target="_blank" rel="noopener noreferrer">
-            <Image
-              src={IconEmail}
-              alt="Email logo"
-              width={50}
-              height={50}
-            />
+          <Link
+            href="mailto:sofiavazs@protonmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={IconEmail} alt="Email logo" width={50} height={50} />
           </Link>
         </StyledSocialsWrapper>
       </StyledHeroContainer>
@@ -60,7 +62,9 @@ const StyledHeroContainer = styled.section`
   min-height: 100vh;
   height: 100vh;
 
-  h1,h2,h3 {
+  h1,
+  h2,
+  h3 {
     margin: 0;
   }
 
@@ -78,7 +82,7 @@ const StyledHeroContainer = styled.section`
   }
 
   h3 {
-    color:#15275c;
+    color: #15275c;
     font-size: 2rem;
   }
 
