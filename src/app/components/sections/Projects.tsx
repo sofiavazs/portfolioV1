@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
+
 import featuredProjects from "../../api/featuredProjects.json";
 import Section from "../Section";
-import Link from "next/link";
 import Image from "next/image";
 import IconGithub from "public/assets/icon-link-github.svg";
 import IconExternalLink from "public/assets/icon-external-link.svg";
@@ -23,10 +24,10 @@ const Projects: React.FC = () => {
   return (
     <>
       <Section sectionId="projects" header="Projects">
-        <p>
+        <Subtitle>
           Most of these projects are hobby projects or from the Technigo Web
           development bootcamp, professional projects are not included.
-        </p>
+        </Subtitle>
         <Wrapper>
           {projectsForDisplay.map((project, i) => {
             return (
@@ -93,10 +94,18 @@ const Projects: React.FC = () => {
 };
 export default Projects;
 
+const Subtitle = styled.p`
+  margin: 0;
+  padding-top: 2rem;
+  text-indent: 4px;
+`;
+
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  padding-top: 2rem;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  padding: 2rem 0;
 
   @media screen and (max-width: 600px) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
@@ -110,7 +119,6 @@ const Wrapper = styled.div`
 const Card = styled.div`
   display: flex;
   padding: 2rem;
-  margin: 1rem;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
@@ -187,7 +195,7 @@ const CardFooter = styled.div`
 const Button = styled.button`
   width: fit-content;
   align-self: center;
-  padding: 10px;
+  padding: 1rem;
   background: transparent;
   border: 1px solid ${(props) => props.theme.button.primary.color};
   cursor: pointer;

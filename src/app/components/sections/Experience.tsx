@@ -64,12 +64,13 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding-top: 2rem;
+  row-gap: 1.5rem;
 
   .resume-link {
     width: fit-content;
-    padding: 10px;
-    margin-right: 30px;
+    padding: 1rem;
+    margin-top: 6px;
     border: 1px solid ${(props) => props.theme.tertiaryColor};
     border-radius: 4px;
     background: transparent;
@@ -89,9 +90,8 @@ const Wrapper = styled.div`
 `;
 
 const Card = styled.div`
-  width: 65%;
+  width: 100%;
   padding: 2rem;
-  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

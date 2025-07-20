@@ -54,7 +54,6 @@ export default About;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   padding-top: 2rem;
 
   img {
@@ -82,14 +81,20 @@ const Wrapper = styled.div`
   }
 
   div {
-    width: 50%;
+    width: 75%;
+
     @media (max-width: 768px) {
       width: 100%;
     }
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;

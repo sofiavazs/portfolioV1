@@ -91,6 +91,10 @@ const StyledHeroContainer = styled.section`
     max-width: 550px;
     line-height: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 const StyledSocialsWrapper = styled.div`
