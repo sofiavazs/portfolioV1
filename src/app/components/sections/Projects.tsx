@@ -64,13 +64,17 @@ const Projects: React.FC = () => {
                   </span>
                 </CardHeader>
                 <CardBody>
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  {project.url ? (
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <p>{project.description}</p>
+                    </Link>
+                  ) : (
                     <p>{project.description}</p>
-                  </Link>
+                  )}
                 </CardBody>
                 <CardFooter>
                   <ul>
@@ -127,11 +131,12 @@ const Card = styled.div`
   box-shadow: ${(props) => props.theme.card.boxShadow};
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
-  border: 1px solid ${(props) => props.theme.card.border};
+  border: ${(props) => props.theme.card.border};
 
   &:hover {
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    transition: all 0.5s ease-in-out;
   }
 `;
 
@@ -151,6 +156,11 @@ const CardHeader = styled.div`
 
     a:first-child {
       margin-right: 1rem;
+    }
+
+    :hover {
+      transform: translateY(-2px);
+      transition: transform 0.3s ease-in-out;
     }
   }
 `;
