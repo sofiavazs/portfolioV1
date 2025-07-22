@@ -14,8 +14,6 @@ export const GlobalStyle = createGlobalStyle`
   };
 
   body {
-    background: ${(props) => props.theme.background};
-    background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
     color: ${(props) => props.theme.primaryColor};
     margin: 0;
   }

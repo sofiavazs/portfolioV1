@@ -136,7 +136,7 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(12px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 `;
 

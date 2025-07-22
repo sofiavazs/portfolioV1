@@ -4,6 +4,7 @@ import StyledComponentsRegistry from "./lib/registry";
 import NavigationBar from "./components/NavigationBar";
 import GlobalThemeWrapper from "./lib/GlobalThemeWrapper";
 import Footer from "./components/Footer";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 export const metadata: Metadata = {
   title: "Sofia Vaz Sousa Portfolio - Software Developer",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <GlobalThemeWrapper>
             <main>
+              <AnimatedBackground />
               <NavigationBar />
               {children}
               <Footer />
