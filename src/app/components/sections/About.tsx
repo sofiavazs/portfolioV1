@@ -54,7 +54,17 @@ export default About;
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  padding-top: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
+  -moz-box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
+  box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
 
   img {
     border-radius: 6px;

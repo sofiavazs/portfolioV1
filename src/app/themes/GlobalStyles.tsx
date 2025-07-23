@@ -17,9 +17,4 @@ export const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.primaryColor};
     margin: 0;
   }
-
-  main {
-    display: flex;
-    flex-direction: column;
-  }
 `;

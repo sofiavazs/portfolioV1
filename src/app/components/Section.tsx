@@ -34,6 +34,10 @@ const Container = styled.section`
     color: ${(props) => props.theme.secondaryColor};
     font-size: 4rem;
     margin: 0;
+
+    @media (max-width: 768px) {
+      font-size: 3.5rem;
+    }
   }
 
   p {

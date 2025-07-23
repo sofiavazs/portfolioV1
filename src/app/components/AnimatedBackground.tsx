@@ -34,22 +34,14 @@ const Ball = styled.span`
   backface-visibility: hidden;
   animation: ${moveAndWobbleAnimation} 60s linear infinite;
   background-color: transparent;
-
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255, 192, 203, 0.9),
-    rgba(155, 89, 182, 0.4) 70%,
-    rgba(108, 52, 131, 0.3) 100%
-  );
-
-  filter: blur(8px);
+  filter: blur(2px);
   opacity: 0.7;
 
   box-shadow:
     inset -10px -10px 30px rgba(255, 255, 255, 0.4),
     inset 10px 10px 20px rgba(255, 255, 255, 0.1),
-    0 0 20px 10px rgba(255, 255, 255, 0.3),
-    0 10px 30px rgba(107, 49, 131, 0.25);
+    0 0 20px 10px rgba(255, 255, 255, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.1);
 `;
 
 const floatingBalls = [
@@ -59,7 +51,8 @@ const floatingBalls = [
     duration: "30s",
     delay: "-3s",
     origin: "10vw 0vh",
-    radius: "50% 50% 40% 60% / 60% 40% 60% 40%",
+    color:
+      "radial-gradient(circle at 30% 30%,rgba(255, 192, 203, 0.9),rgba(155, 89, 182, 0.4) 70%,rgba(108, 52, 131, 0.3) 100%)",
   },
   {
     top: "50%",
@@ -67,7 +60,8 @@ const floatingBalls = [
     duration: "45s",
     delay: "-10s",
     origin: "5vw 0vh",
-    radius: "40% 60% 50% 50% / 70% 30% 60% 40%",
+    color:
+      "radial-gradient(circle at 30% 30%, rgba(173, 216, 230, 0.9), rgba(100, 149, 237, 0.4) 70%, rgba(70, 130, 180, 0.3) 100%)",
   },
   {
     top: "70%",
@@ -75,7 +69,8 @@ const floatingBalls = [
     duration: "40s",
     delay: "-5s",
     origin: "15vw 10vh",
-    radius: "30% 70% 60% 40% / 50% 40% 60% 50%",
+    color:
+      "radial-gradient(circle at 30% 30%, rgba(144, 238, 144, 0.9), rgba(60, 179, 113, 0.4) 70%, rgba(46, 139, 87, 0.3) 100%)",
   },
   {
     top: "10%",
@@ -83,7 +78,8 @@ const floatingBalls = [
     duration: "50s",
     delay: "-2s",
     origin: "10vw 5vh",
-    radius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+    color:
+      "radial-gradient(circle at 30% 30%, rgba(248, 213, 86, 0.95), rgba(247, 184, 37, 0.7) 70%, rgba(199, 134, 5, 0.5) 100%)",
   },
 ];
 
@@ -99,7 +95,8 @@ const AnimatedBackground = () => {
             animationDuration: ball.duration,
             animationDelay: ball.delay,
             transformOrigin: ball.origin,
-            borderRadius: ball.radius,
+            borderRadius: "50%",
+            background: ball.color,
           }}
         />
       ))}

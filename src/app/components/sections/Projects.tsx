@@ -2,11 +2,11 @@
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styled from "styled-components";
 
 import featuredProjects from "../../api/featuredProjects.json";
 import Section from "../Section";
-import Image from "next/image";
 import IconGithub from "public/assets/icon-link-github.svg";
 import IconExternalLink from "public/assets/icon-external-link.svg";
 

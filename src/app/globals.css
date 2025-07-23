@@ -13,8 +13,3 @@ body {
   margin: 0;
   scroll-behavior: smooth;
 }
-
-main {
-  display: flex;
-  flex-direction: column;
-}

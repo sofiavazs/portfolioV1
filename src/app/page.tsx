@@ -21,5 +21,5 @@ export default function Home() {
 
 const SectionWrapper = styled.div`
   max-width: 1400px;
-  align-self: center;
+  margin: 0 auto;
 `;

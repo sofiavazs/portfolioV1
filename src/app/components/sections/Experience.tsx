@@ -130,11 +130,13 @@ const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
+
   p {
     color: ${(props) => props.theme.primaryColor};
     font-size: 1rem;
     line-height: 1.75rem;
   }
+
   .subheading {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -142,6 +144,12 @@ const CardHeader = styled.div`
     text-indent: 4px;
     letter-spacing: 1.5px;
     margin: 0;
+
+    @media (max-width: 768px) {
+      h3 {
+        font-size: 2rem;
+      }
+    }
   }
 `;
 
@@ -151,11 +159,13 @@ const CardBody = styled.div`
     font-size: 1.5rem;
     margin-bottom: 0;
   }
+
   p {
     color: ${(props) => props.theme.primaryColor};
     font-size: 1rem;
     line-height: 1.75rem;
   }
+
   .project-subheader {
     color: #15275c;
     font-size: 0.75rem;
