@@ -93,7 +93,8 @@ const StyledHeroContainer = styled.section`
   }
 
   @media (max-width: 768px) {
-    padding: 0 2rem;
+    padding: 3rem 2rem 0 2rem;
+    justify-content: flex-start;
   }
 `;
 
