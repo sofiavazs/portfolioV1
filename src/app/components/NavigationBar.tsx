@@ -74,7 +74,7 @@ const NavigationBar: React.FC = () => {
         Contact
       </StyledLink>
       <StyledLink
-        href="/resume.pdf"
+        href="/sofia-resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="resume-link"
