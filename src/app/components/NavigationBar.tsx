@@ -90,15 +90,15 @@ interface NavBarProps {
 }
 
 const NavBar = styled.nav<NavBarProps>`
-  width: 100vw;
-  height: 85px;
+  width: 85vw;
   display: flex;
   justify-content: flex-end;
   position: sticky;
   align-items: center;
-  top: 0;
+  top: 1rem;
   background-color: transparent;
   transition: all 0.5s ease-in-out;
+  margin: 0 auto;
 
   ${({ $isBlurred }) =>
     $isBlurred &&
@@ -110,6 +110,7 @@ const NavBar = styled.nav<NavBarProps>`
       -webkit-box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
       -moz-box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
       box-shadow: 0px 4px 10px rgba(233, 14, 200, 0.1);
+      border-radius: 1rem;
     `}
 
   div {
