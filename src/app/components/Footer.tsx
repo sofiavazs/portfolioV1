@@ -55,13 +55,15 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  :hover {
-    transform: translateY(-2px);
-    transition: transform 0.3s ease-in-out;
-  }
-
   p {
     margin-right: 8px;
+  }
+
+  a {
+    :hover {
+      transform: translateY(-2px);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 
   img {

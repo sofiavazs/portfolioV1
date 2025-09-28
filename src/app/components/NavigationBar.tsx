@@ -1,42 +1,21 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
+import { useDetectScroll } from "../utils/useDetectScroll";
+import { useActivePath } from "../utils/useActivePath";
+
 const NavigationBar: React.FC = () => {
-  const [path, setPath] = useState<string>("/");
-  const [isBlurred, setIsBlurred] = useState<boolean>(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsBlurred(window.scrollY > 50);
-      // Highlight the active link based on scroll position
-      const sections = document.querySelectorAll("section");
-      let currentPath = "/";
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top <= 200 && rect.bottom >= 200) {
-          const id = section.getAttribute("id");
-          if (id) {
-            currentPath = `#${id}`;
-          }
-        }
-      });
-      setPath(currentPath);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const scrolled = useDetectScroll();
+  const path = useActivePath(200);
+  const isBlurred = scrolled > 50;
 
   return (
     <NavBar $isBlurred={isBlurred}>
       <StyledLink
         id="link-bio"
         href="/"
-        onClick={() => setPath("/")}
         className={path === "/" ? "active" : ""}
       >
         Bio
@@ -44,7 +23,6 @@ const NavigationBar: React.FC = () => {
       <StyledLink
         id="link-about"
         href="/#about"
-        onClick={() => setPath("#about")}
         className={path === "#about" ? "active" : ""}
       >
         About
@@ -52,7 +30,6 @@ const NavigationBar: React.FC = () => {
       <StyledLink
         id="link-experience"
         href="/#experience"
-        onClick={() => setPath("#experience")}
         className={path === "#experience" ? "active" : ""}
       >
         Experience
@@ -60,7 +37,6 @@ const NavigationBar: React.FC = () => {
       <StyledLink
         id="link-projects"
         href="/#projects"
-        onClick={() => setPath("#projects")}
         className={path === "#projects" ? "active" : ""}
       >
         Projects
