@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 
-    @media screen and (min-width: 0px) and (max-width: 550px) {
+  @media screen and (max-width: 550px)  {
       #link-experience, #link-bio, #link-about, #link-experience, #link-contact, #link-projects {
         display:none;
       }
