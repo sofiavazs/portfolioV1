@@ -33,6 +33,18 @@ const morphAnimation = keyframes`
   }
 `;
 
+const floatAnimation = keyframes`
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.98);
+  }
+`;
+
 const Background = styled.div`
   position: fixed;
   width: 100vw;
@@ -65,10 +77,11 @@ const GradientBlob = styled.div`
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  filter: blur(50px);
+  filter: blur(30px);
   animation:
     ${pulsatingAnimation} 6s ease-in-out infinite,
-    ${morphAnimation} 6s ease-in-out infinite;
+    ${morphAnimation} 6s ease-in-out infinite,
+    ${floatAnimation} 6s ease-in-out infinite;
   mix-blend-mode: normal;
 `;
 
