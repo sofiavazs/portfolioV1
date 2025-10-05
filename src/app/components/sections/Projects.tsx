@@ -1,21 +1,22 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import { useAppData } from "@/app/context/AppContext";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
-import featuredProjects from "../../api/featuredProjects.json";
 import Section from "../Section";
 import IconGithub from "public/assets/icon-link-github.svg";
 import IconExternalLink from "public/assets/icon-external-link.svg";
 
 const Projects: React.FC = () => {
+  const { projects } = useAppData();
   const [page, setPage] = useState<number>(1);
 
   const projectsPerPage = 6;
   const end = projectsPerPage * page;
-  const projectsForDisplay = featuredProjects.slice(0, end);
+  const projectsForDisplay = projects?.slice(0, end);
 
   const handleLoadMore = () => {
     setPage(page + 1);
@@ -29,24 +30,26 @@ const Projects: React.FC = () => {
           development bootcamp, professional projects are not included.
         </Subtitle>
         <Wrapper>
-          {projectsForDisplay.map((project, i) => {
+          {projectsForDisplay?.map((project, i) => {
             return (
               <Card key={i}>
                 <CardHeader>
                   <h1>{project.name}</h1>
                   <span>
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image
-                        src={IconGithub}
-                        alt="github link"
-                        width={25}
-                        height={25}
-                      />
-                    </Link>
+                    {project.github && (
+                      <Link
+                        href={project?.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image
+                          src={IconGithub}
+                          alt="github link"
+                          width={25}
+                          height={25}
+                        />
+                      </Link>
+                    )}
                     {project.url && (
                       <Link
                         href={project.url}
@@ -78,7 +81,7 @@ const Projects: React.FC = () => {
                 </CardBody>
                 <CardFooter>
                   <ul>
-                    {project.tags.map((tag, i) => (
+                    {project.tags?.map((tag, i) => (
                       <li key={i}>{tag}</li>
                     ))}
                   </ul>
@@ -87,7 +90,7 @@ const Projects: React.FC = () => {
             );
           })}
         </Wrapper>
-        {end <= featuredProjects.length && (
+        {end <= projects?.length && (
           <Button type="button" onClick={handleLoadMore}>
             Show More
           </Button>
