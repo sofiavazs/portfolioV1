@@ -1,24 +1,25 @@
 "use client";
 import React, { useState } from "react";
 import styled from "styled-components";
-import experience from "../../api/experience.json";
+import { useAppData } from "@/app/context/AppContext";
 import Section from "../Section";
 import Link from "next/link";
 
 const Experience: React.FC = () => {
+  const { experience } = useAppData();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
       <Section sectionId="experience" header="Experience">
         <Wrapper>
-          {experience.map((job, i) => {
-            const hasProjects = job.projects.length > 0;
+          {experience?.map((job, i) => {
+            const hasProjects = !!job.projects?.length;
             return (
               <Card key={i}>
                 <CardHeader>
                   <h3>{job.company}</h3>
-                  <p className="subheading">{job.date}</p>
-                  <p className="subheading">{job.title}</p>
+                  <p className="subheading">{job.dates}</p>
+                  <p className="subheading">{job.jobTitle}</p>
                   <p>{job.description}</p>
                 </CardHeader>
                 {hasProjects && (
@@ -34,7 +35,7 @@ const Experience: React.FC = () => {
                         <div key={i}>
                           <h4>{project.name}</h4>
                           <p className="project-subheader">{project.dates}</p>
-                          <p className="project-subheader">{project.title}</p>
+                          <p className="project-subheader">{project.role}</p>
                           <p>{project.description}</p>
                         </div>
                       ))}
@@ -45,7 +46,7 @@ const Experience: React.FC = () => {
             );
           })}
           <Link
-            href="/resume.pdf"
+            href="/sofia-resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="resume-link"

@@ -2,6 +2,19 @@
 from a Sanity.io dataset. More info: https://www.sanity.io/docs/content-lake/groq-introduction
 */
 
+export const aboutQuery = `*[_type == "about"]{
+  _id,
+  upperText,
+  title,
+  subtitle,
+  links,
+  intro,
+  about,
+  picture,
+  description,
+  tech
+}`;
+
 export const projectsQuery = `*[_type == "project"]{
   _id,
   name,
@@ -9,4 +22,18 @@ export const projectsQuery = `*[_type == "project"]{
   url,
   github,
   tags
+}`;
+
+export const experienceQuery = `*[_type == "experience"] | order(_createdAt desc) {
+  _id,
+  company,
+  dates,
+  jobTitle,
+  description,
+  projects[]{
+    name,
+    dates,
+    role,
+    description
+  }
 }`;

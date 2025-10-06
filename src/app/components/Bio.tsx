@@ -4,49 +4,51 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
+import { useAppData } from "../context/AppContext";
 import IconGithub from "public/assets/icon-github.svg";
 import IconLinkedin from "public/assets/icon-linkedin.svg";
 import IconEmail from "public/assets/icon-email.svg";
 
 const Bio: React.FC = () => {
+  const { about } = useAppData();
+  const { intro, upperText, title, subtitle, links } = about[0];
+
+  if (!about[0]) return null;
+
+  const iconsArray = [
+    { keyword: "github.com", icon: IconGithub, alt: "GitHub" },
+    { keyword: "linkedin.com", icon: IconLinkedin, alt: "LinkedIn" },
+    { keyword: "mailto:", icon: IconEmail, alt: "Email" },
+  ];
+
   return (
     <>
       <StyledHeroContainer>
-        <h1>hello, my name is</h1>
-        <h2>Sofia Vaz Sousa.</h2>
-        <h3>I build things with code.</h3>
-        <p>
-          I&apos;m software developer with a 12-year background in healthcare
-          that transitioned into tech. Currently, I&apos;m building
-          human-centered products within e-health.
-        </p>
+        <h1>{upperText}</h1>
+        <h2>{title}</h2>
+        <h3>{subtitle}</h3>
+        <p>{intro}</p>
         <StyledSocialsWrapper>
-          <Link
-            href="https://github.com/sofiavazs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={IconGithub} alt="Github logo" width={50} height={50} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/sofiavazsousa/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={IconLinkedin}
-              alt="Linkedin logo"
-              width={50}
-              height={50}
-            />
-          </Link>
-          <Link
-            href="mailto:sofiavazs@protonmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={IconEmail} alt="Email logo" width={50} height={50} />
-          </Link>
+          {links?.map((link) => {
+            const icon = iconsArray.find((icon) => link.includes(icon.keyword));
+            return (
+              <Link
+                key={link}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {icon && (
+                  <Image
+                    src={icon.icon}
+                    alt={icon.alt}
+                    width={50}
+                    height={50}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </StyledSocialsWrapper>
       </StyledHeroContainer>
     </>

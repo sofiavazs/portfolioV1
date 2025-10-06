@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { AppDataProvider } from "./context/AppContext";
-import { getProjects } from "./api/sanity";
+import { getAboutData, getExperience, getProjects } from "./api/sanity";
 import StyledComponentsRegistry from "./lib/registry";
 import NavigationBar from "./components/NavigationBar";
 import GlobalThemeWrapper from "./lib/GlobalThemeWrapper";
@@ -23,9 +23,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const projects = await getProjects();
+  const experience = await getExperience();
+  const about = await getAboutData();
+
   const data = {
     projects,
-    experiences: [], // Placeholder for experiences data
+    experience,
+    about,
   };
 
   return (
