@@ -12,10 +12,7 @@ const Section: React.FC<SectionProps> = ({ sectionId, header, children }) => {
   return (
     <>
       <Container id={sectionId}>
-        <h2>
-          {header}
-          <Divider />
-        </h2>
+        <h2>{header}</h2>
         {children}
       </Container>
     </>
@@ -24,15 +21,15 @@ const Section: React.FC<SectionProps> = ({ sectionId, header, children }) => {
 export default Section;
 
 const Container = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 5rem;
-  margin-bottom: 5rem;
-  scroll-margin-top: 120px;
+  box-sizing: border-box;
 
   h2 {
-    color: ${(props) => props.theme.secondaryColor};
-    font-size: 4rem;
+    font-size: 8rem;
+    font-family: "Antic Didone", sans-serif;
+    font-weight: 400;
     margin: 0;
 
     @media (max-width: 768px) {
@@ -41,21 +38,6 @@ const Container = styled.section`
   }
 
   p {
-    color: ${(props) => props.theme.primaryColor};
     line-height: 1.5rem;
   }
-
-  @media (max-width: 768px) {
-    padding: 0 2rem;
-  }
-`;
-
-const Divider = styled.span`
-  display: block;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    rgba(58, 10, 146, 0.502),
-    rgba(237, 237, 237, 0)
-  );
 `;

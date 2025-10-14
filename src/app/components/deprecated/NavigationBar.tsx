@@ -3,12 +3,12 @@ import React from "react";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 
-import { useDetectScroll } from "../utils/useDetectScroll";
-import { useActivePath } from "../utils/useActivePath";
+import { useDetectScroll } from "../../utils/useDetectScroll";
+import { usePathname } from "next/navigation";
 
 const NavigationBar: React.FC = () => {
   const scrolled = useDetectScroll();
-  const path = useActivePath(200);
+  const pathname = usePathname();
   const isBlurred = scrolled > 50;
 
   return (
@@ -16,28 +16,28 @@ const NavigationBar: React.FC = () => {
       <StyledLink
         id="link-bio"
         href="/"
-        className={path === "/" ? "active" : ""}
+        className={pathname === "/" ? "active" : ""}
       >
         Bio
       </StyledLink>
       <StyledLink
         id="link-about"
-        href="/#about"
-        className={path === "#about" ? "active" : ""}
+        href="/about"
+        className={pathname === "/about" ? "active" : ""}
       >
         About
       </StyledLink>
       <StyledLink
         id="link-experience"
-        href="/#experience"
-        className={path === "#experience" ? "active" : ""}
+        href="/experience"
+        className={pathname === "/experience" ? "active" : ""}
       >
         Experience
       </StyledLink>
       <StyledLink
         id="link-projects"
-        href="/#projects"
-        className={path === "#projects" ? "active" : ""}
+        href="/projects"
+        className={pathname === "/projects" ? "active" : ""}
       >
         Projects
       </StyledLink>
@@ -105,13 +105,10 @@ const StyledLink = styled(Link)`
   border-bottom: 2px solid transparent;
 
   &.active {
-    border-bottom: 1px solid ${(props) => props.theme.tertiaryColor};
-    color: ${(props) => props.theme.tertiaryColor};
     transition: all 0.3s ease;
   }
 
   &:hover {
-    color: ${(props) => props.theme.tertiaryColor};
     transition: all 0.3s ease;
   }
 
@@ -119,14 +116,11 @@ const StyledLink = styled(Link)`
     width: fit-content;
     padding: 10px;
     margin-right: 30px;
-    border: 1px solid ${(props) => props.theme.tertiaryColor};
     border-radius: 4px;
     background: transparent;
     cursor: pointer;
-    color: ${(props) => props.theme.tertiaryColor};
     font-size: 1rem;
     font-family: monospace;
-    box-shadow: 3px 3px 0 0 ${(props) => props.theme.tertiaryColor};
 
     &:hover,
     :active {

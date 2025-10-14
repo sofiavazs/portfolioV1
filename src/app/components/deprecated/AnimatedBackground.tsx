@@ -54,20 +54,16 @@ const Background = styled.div`
   background:
     radial-gradient(
       circle at 20% 80%,
-      rgba(120, 119, 198, 0.2),
+      rgba(255, 0, 150, 0.15),
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(255, 119, 198, 0.2),
+      rgba(0, 255, 255, 0.12),
       transparent 50%
     ),
-    radial-gradient(
-      circle at 40% 40%,
-      rgba(120, 219, 255, 0.15),
-      transparent 50%
-    ),
-    linear-gradient(135deg, #e8f0fe 0%, #d1d9ff 100%);
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 0, 0.1), transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 50%, #0a1a1a 100%);
   overflow: hidden;
   z-index: -1;
 `;
@@ -82,7 +78,7 @@ const GradientBlob = styled.div`
     ${pulsatingAnimation} 6s ease-in-out infinite,
     ${morphAnimation} 6s ease-in-out infinite,
     ${floatAnimation} 6s ease-in-out infinite;
-  mix-blend-mode: normal;
+  mix-blend-mode: screen;
 `;
 
 const gradientBlobs = [
@@ -90,19 +86,19 @@ const gradientBlobs = [
     top: "10%",
     left: "-10%",
     gradient:
-      "radial-gradient(circle at 30% 30%, rgba(255, 119, 198, 0.6), rgba(255, 105, 180, 0.4) 70%, rgba(199, 21, 133, 0.2) 100%)",
+      "radial-gradient(circle at 30% 30%, rgba(255, 0, 150, 0.8), rgba(255, 105, 180, 0.6) 70%, rgba(199, 21, 133, 0.3) 100%)",
   },
   {
     top: "55%",
     left: "70%",
     gradient:
-      "radial-gradient(circle at 70% 70%, rgba(120, 119, 198, 0.6), rgba(75, 0, 130, 0.4) 70%, rgba(25, 25, 112, 0.2) 100%)",
+      "radial-gradient(circle at 70% 70%, rgba(0, 255, 255, 0.7), rgba(0, 191, 255, 0.5) 70%, rgba(30, 144, 255, 0.3) 100%)",
   },
   {
     top: "80%",
     left: "20%",
     gradient:
-      "radial-gradient(circle at 50% 50%, rgba(120, 219, 255, 0.5), rgba(0, 191, 255, 0.3) 70%, rgba(30, 144, 255, 0.2) 100%)",
+      "radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.6), rgba(255, 215, 0, 0.4) 70%, rgba(255, 140, 0, 0.2) 100%)",
   },
   {
     top: "-15%",

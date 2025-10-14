@@ -1,10 +1,8 @@
 export const defaultTheme = {
   name: "default",
-  background: "radial-gradient(at right center, #96bae0, #fde4fdb4)",
-  primaryColor: "#15275c",
-  secondaryColor: "#191975c9",
-  tertiaryColor: "#e90ec8",
-  font: "Roboto",
+  primaryColor: "#821144",
+  secondaryColor: "#d5cdc4",
+  font: "Montserrat",
   button: {
     primary: {
       background: "transparent",

@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
 
-import Section from "../Section";
+import Section from "../ui/Section";
 import IconGithub from "public/assets/icon-link-github.svg";
 import IconExternalLink from "public/assets/icon-external-link.svg";
 
