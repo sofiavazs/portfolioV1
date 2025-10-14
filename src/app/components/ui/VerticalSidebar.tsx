@@ -2,8 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
+import { useDetectScroll } from "@/app/utils/useDetectScroll";
 import IconGithub from "public/assets/icon-github.png";
 import IconLinkedin from "public/assets/icon-linkedin.png";
 import IconEmail from "public/assets/icon-email.png";
@@ -13,6 +14,7 @@ interface SocialSidebarProps {
 }
 
 const VerticalSidebar: React.FC<SocialSidebarProps> = ({ links }) => {
+  const scrolled = useDetectScroll();
   const iconsArray = [
     { keyword: "github.com", icon: IconGithub, alt: "GitHub" },
     { keyword: "linkedin.com", icon: IconLinkedin, alt: "LinkedIn" },
@@ -20,7 +22,7 @@ const VerticalSidebar: React.FC<SocialSidebarProps> = ({ links }) => {
   ];
 
   return (
-    <SidebarContainer>
+    <SidebarContainer $isBlurred={scrolled > 0}>
       <SocialLinks>
         {links?.map((link) => {
           const icon = iconsArray.find((icon) => link.includes(icon.keyword));
@@ -47,7 +49,7 @@ const VerticalSidebar: React.FC<SocialSidebarProps> = ({ links }) => {
 
 export default VerticalSidebar;
 
-const SidebarContainer = styled.div`
+const SidebarContainer = styled.div<{ $isBlurred: boolean }>`
   position: fixed;
   left: 2rem;
   top: 2rem;
@@ -60,6 +62,20 @@ const SidebarContainer = styled.div`
   @media (max-width: 767px) {
     top: 2rem;
     flex-direction: row;
+
+    ${({ $isBlurred }) =>
+      $isBlurred &&
+      css`
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        -webkit-backdrop-filter: blur(4px);
+        -moz-backdrop-filter: blur(4px);
+        backdrop-filter: blur(8px);
+        -webkit-box-shadow: px 4px 10px rgba(157, 147, 156, 0.1);
+        -moz-box-shadow: px 4px 10px rgba(157, 147, 156, 0.1);
+        box-shadow: 0px 4px 10px rgba(157, 147, 156, 0.1);
+        border-radius: 1rem;
+      `}
   }
 `;
 
