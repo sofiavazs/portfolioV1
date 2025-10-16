@@ -62,21 +62,17 @@ const StyledPageContainer = styled(PageContainer)`
   background-color: ${(props) => props.theme.secondaryColor};
   color: ${(props) => props.theme.primaryColor};
   height: 100%;
-  padding: 5rem;
-
-  @media (max-width: 767px) {
-    padding: 5rem 1rem;
-  }
+  padding: 5rem 2rem;
 `;
 
 const Wrapper = styled.div`
-  width: 100%;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-top: 2rem;
   row-gap: 1.5rem;
+  margin: 0 auto;
 `;
 
 const Card = styled.div`

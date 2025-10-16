@@ -110,9 +110,12 @@ export default ProjectPage;
 const StyledPageContainer = styled(PageContainer)`
   background-color: #260413;
   color: ${(props) => props.theme.secondaryColor};
-  overflow: scroll;
-  padding: 5rem 5rem 5rem 5rem;
   justify-content: center;
+  padding: 5rem 5rem 5rem 5rem;
+
+  @media (max-width: 767px) {
+    padding: 5rem 2rem;
+  }
 `;
 
 const Subtitle = styled.p`
@@ -123,7 +126,7 @@ const Subtitle = styled.p`
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
   grid-row-gap: 1rem;
   grid-column-gap: 1rem;
   padding: 2rem 0;
@@ -143,19 +146,9 @@ const Card = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
-  /* background: ${(props) => props.theme.primaryColor}; */
   background: #38061b;
   border-radius: 16px;
-  /* box-shadow: ${(props) => props.theme.card.boxShadow}; */
-  /* backdrop-filter: blur(6.5px); */
-  /* -webkit-backdrop-filter: blur(6.5px); */
   border: 1px solid ${(props) => props.theme.primaryColor};
-
-  /* &:hover {
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(12px);
-    transition: all 0.3s ease-in-out;
-  } */
 `;
 
 const CardHeader = styled.div`

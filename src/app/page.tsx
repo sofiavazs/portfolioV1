@@ -78,7 +78,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 5rem 2rem;
+    padding: 0.5rem;
     align-items: center;
   }
 `;

@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height: 100vh;
   display: flex;
   color: ${(props) => props.theme.primaryColor};
-  overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
+    padding: 5rem 1.5rem;
     height: unset;
   }
 `;

@@ -53,12 +53,13 @@ const About: React.FC = () => {
 export default About;
 
 const StyledPageContainer = styled(PageContainer)`
+  height: 100vh;
   background-color: #260413;
   color: ${(props) => props.theme.secondaryColor};
-  overflow: hidden;
   padding: 5rem 5rem 0rem 5rem;
 
   @media (max-width: 767px) {
+    height: auto;
     padding: 5rem 2rem;
   }
 `;

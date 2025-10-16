@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-
 import styled from "styled-components";
 
 interface HorizontalNavBarProps {
@@ -25,16 +24,13 @@ export default HorizontalNavBar;
 
 const Container = styled.div`
   position: absolute;
-  left: 2rem;
+  width: 100%;
   top: 2rem;
+  left: 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
   z-index: 1000;
-
-  @media (max-width: 768px) {
-    left: 1rem;
-  }
 `;
 
 const StyledLink = styled(Link)<{ $darkColored?: boolean }>`

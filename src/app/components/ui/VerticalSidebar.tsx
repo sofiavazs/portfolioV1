@@ -51,7 +51,7 @@ export default VerticalSidebar;
 
 const SidebarContainer = styled.div<{ $isBlurred: boolean }>`
   position: fixed;
-  left: 2rem;
+  left: 1rem;
   top: 2rem;
   display: flex;
   flex-direction: column;
@@ -60,13 +60,14 @@ const SidebarContainer = styled.div<{ $isBlurred: boolean }>`
   z-index: 1000;
 
   @media (max-width: 767px) {
-    top: 2rem;
+    width: 90%;
+    padding: 1rem;
     flex-direction: row;
+    transition: all 0.5s ease-in-out;
 
     ${({ $isBlurred }) =>
       $isBlurred &&
       css`
-        padding: 1rem;
         background-color: rgba(255, 255, 255, 0.3);
         -webkit-backdrop-filter: blur(4px);
         -moz-backdrop-filter: blur(4px);
